@@ -61,7 +61,7 @@ def main():
             for bullet in shot_group:
                 if bullet.collision(roid):
                     bullet.kill()
-                    roid.kill()
+                    roid.split()
 
         pygame.display.flip()
         
