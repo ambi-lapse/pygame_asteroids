@@ -58,6 +58,10 @@ def main():
             if player.collision(roid):
                 print("Game Over")
                 sys.exit()
+            for bullet in shot_group:
+                if bullet.collision(roid):
+                    bullet.kill()
+                    roid.kill()
 
         pygame.display.flip()
         
